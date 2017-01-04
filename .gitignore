@@ -1,0 +1,8 @@
+**/xcuserdata/*
+**/*.xccheckout
+**/*.xcscmblueprint
+build/
+.idea
+DerivedData/
+Carthage/*
+Cartfile.resolved
