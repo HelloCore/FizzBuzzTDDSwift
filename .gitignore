@@ -1,6 +1,7 @@
 **/xcuserdata/*
 **/*.xccheckout
 **/*.xcscmblueprint
+FizzBuzzTDDSwift.xcodeproj/project.xcworkspace/xcuserdata/*
 build/
 .idea
 DerivedData/
