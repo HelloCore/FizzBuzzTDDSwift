@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum Move {
+	case number
+	case fizzBuzz
+	case buzz
+	case fizz
+}
+
 class Brain {
 	
 	public func isDividedByThree(_ number: Int) -> Bool {
@@ -26,19 +33,19 @@ class Brain {
 		return number % divisor == 0
 	}
 	
-	public func checkNumber(_ number: Int) -> String {
-		let result: String
+	public func checkNumber(_ number: Int) -> Move {
+		let result: Move
 		switch number {
 			case 0:
-				result = "0"
+				result = .number
 			case _ where isDividedByFifteen(number):
-				result = "FizzBuzz"
+				result = .fizzBuzz
 			case _ where isDividedByFive(number):
-				result = "Buzz"
+				result = .buzz
 			case _ where isDividedByThree(number):
-				result = "Fizz"
+				result = .fizz
 			default:
-				result = "\(number)"
+				result = .number
 		}
 		return result
 	}

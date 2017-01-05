@@ -10,7 +10,7 @@ import XCTest
 
 @testable import FizzBuzzTDDSwift
 
-class GameTests: XCTestCase {
+class GameUnitTests: XCTestCase {
 	
 	let game = Game()
     
@@ -30,61 +30,61 @@ class GameTests: XCTestCase {
 	
 	func testIfMoveFizzIsRight() {
 		game.score = 2
-		let result = game.play("Fizz")
+		let result = game.play(.fizz).isRight
 		XCTAssertEqual(result, true)
 	}
 	
 	func testIfMoveFizzIsWrong() {
 		game.score = 1
-		let result = game.play("Fizz")
+		let result = game.play(.fizz).isRight
 		XCTAssertEqual(result, false)
 	}
 	
 	func testIfMoveBuzzIsRight() {
 		game.score = 4
-		let result = game.play("Buzz")
+		let result = game.play(.buzz).isRight
 		XCTAssertEqual(result, true)
 	}
 	
 	func testIfMoveBuzzIsWrong() {
 		game.score = 5
-		let result = game.play("Buzz")
+		let result = game.play(.buzz).isRight
 		XCTAssertEqual(result, false)
 	}
 	
 	func testIfMoveFizzBuzzIsRight() {
 		game.score = 29
-		let result = game.play("FizzBuzz")
+		let result = game.play(.fizzBuzz).isRight
 		XCTAssertEqual(result, true)
 	}
 	
 	func testIfMoveFizzBuzzIsWrong() {
 		game.score = 30
-		let result = game.play("FizzBuzz")
+		let result = game.play(.fizzBuzz).isRight
 		XCTAssertEqual(result, false)
 	}
 	
 	func testIfMoveNumberIsRight() {
 		game.score = 40
-		let result = game.play("41")
+		let result = game.play(.number).isRight
 		XCTAssertEqual(result, true)
 	}
 	
 	func testIfMoveNumberIsWrong() {
 		game.score = 29
-		let result = game.play("30")
+		let result = game.play(.number).isRight
 		XCTAssertEqual(result, false)
 	}
 	
 	func testIfMoveWrongScoreNotIncreased() {
 		game.score = 1
-		let _ = game.play("3")
+		let _ = game.play(.fizz)
 		XCTAssertEqual(game.score, 1, "Score should not increased")
 	}
 	
 	func testIfMoveRightScoreIncreased() {
 		game.score = 1
-		let _ = game.play("2")
+		let _ = game.play(.number)
 		XCTAssertEqual(game.score, 2, "Score should increased")
 		
 	}

@@ -10,7 +10,7 @@ import XCTest
 
 @testable import FizzBuzzTDDSwift
 
-class BrainTests: XCTestCase {
+class BrainUnitTests: XCTestCase {
 	
 	let brain = Brain()
 	
@@ -56,31 +56,31 @@ class BrainTests: XCTestCase {
 	func testSayFizzBuzz() {
 		let number = 30
 		let result = brain.checkNumber(number)
-		XCTAssertEqual(result, "FizzBuzz", "\(number) should say FizzBuzz")
+		XCTAssertEqual(result, .fizzBuzz, "\(number) should say FizzBuzz")
 	}
 	
 	func testSayFizz(){
 		let number = 6
 		let result = brain.checkNumber(number)
-		XCTAssertEqual(result, "Fizz", "\(number) should say Fizz")
+		XCTAssertEqual(result, .fizz, "\(number) should say Fizz")
 	}
 	
 	func testSayBuzz(){
 		let number = 20
 		let result = brain.checkNumber(number)
-		XCTAssertEqual(result, "Buzz", "\(number) should say Buzz")
+		XCTAssertEqual(result, .buzz, "\(number) should say Buzz")
 	}
 	
 	func testSayNumber(){
 		let number = 1
 		let result = brain.checkNumber(number)
-		XCTAssertEqual(result, "\(number)", "\(number) should say \(number)")
+		XCTAssertEqual(result, .number, "\(number) should say \(number)")
 		
 	}
 	func testSayZero(){
 		let number = 0
 		let result = brain.checkNumber(number)
-		XCTAssertEqual(result, "\(number)", "\(number) should say \(number)")
+		XCTAssertEqual(result, .number, "\(number) should say \(number)")
 		
 	}
 	

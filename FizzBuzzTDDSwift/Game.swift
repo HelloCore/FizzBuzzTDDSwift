@@ -13,11 +13,15 @@ class Game {
 	let brain = Brain()
 	var score = 0
 	
-	public func play(_ move: String) -> Bool{
+	public func play(_ move: Move) -> (isRight: Bool, score: Int){
 		let result = brain.checkNumber(score+1) == move
 		if result {
 			score += 1
 		}
-		return result
+		return (result, score)
+	}
+	
+	public func restart() {
+		score = 0
 	}
 }
