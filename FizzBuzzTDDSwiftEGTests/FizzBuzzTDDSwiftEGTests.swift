@@ -37,12 +37,7 @@ class FizzBuzzTDDSwiftEGTests: XCTestCase {
 		
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("scoreLabel")).assert(with: grey_text("Score: 0 | High Score: 0"))
 		
-		EarlGrey.select(elementWithMatcher: grey_allOfMatchers([
-			grey_not(grey_accessibilityID("playAgainBtn")),
-			grey_not(grey_ancestor(grey_accessibilityID("playAgainBtn"))),
-			grey_text("Play Again")]))
-			.perform(grey_tap())
-		
+		EarlGrey.select(elementWithMatcher: grey_text("Play Again")).inRoot(grey_kindOfClass(NSClassFromString("_UIAlertControllerActionView"))).perform(grey_tap())
 	}
 	
 	func testPlayToFizz() {
@@ -105,11 +100,7 @@ class FizzBuzzTDDSwiftEGTests: XCTestCase {
 		
 		EarlGrey.select(elementWithMatcher: grey_text("Your score is 3 and high score is 0")).assert(with: grey_sufficientlyVisible())
 		
-		EarlGrey.select(elementWithMatcher: grey_allOfMatchers([
-														grey_not(grey_accessibilityID("playAgainBtn")),
-														grey_not(grey_ancestor(grey_accessibilityID("playAgainBtn"))),
-														grey_text("Play Again")]))
-											.perform(grey_tap())
+		EarlGrey.select(elementWithMatcher: grey_text("Play Again")).inRoot(grey_kindOfClass(NSClassFromString("_UIAlertControllerActionView"))).perform(grey_tap())
 		
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("numberBtn")).assert(with: grey_buttonTitle("0"))
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("scoreLabel")).assert(with: grey_text("Score: 0 | High Score: 3"))
@@ -126,12 +117,7 @@ class FizzBuzzTDDSwiftEGTests: XCTestCase {
 		fizzBtn.perform(grey_tap())
 		fizzBtn.perform(grey_tap())
 		
-		EarlGrey.select(elementWithMatcher: grey_allOfMatchers([
-			grey_not(grey_accessibilityID("playAgainBtn")),
-			grey_not(grey_ancestor(grey_accessibilityID("playAgainBtn"))),
-			grey_text("Play Again")]))
-			.perform(grey_tap())
-		
+		EarlGrey.select(elementWithMatcher: grey_text("Play Again")).inRoot(grey_kindOfClass(NSClassFromString("_UIAlertControllerActionView"))).perform(grey_tap())
 		
 		numberBtn.perform(grey_tap())
 		numberBtn.perform(grey_tap())
@@ -143,11 +129,7 @@ class FizzBuzzTDDSwiftEGTests: XCTestCase {
 		EarlGrey.select(elementWithMatcher: grey_text("Your score is 5 and high score is 3")).assert(with: grey_sufficientlyVisible())
 		
 		
-		EarlGrey.select(elementWithMatcher: grey_allOfMatchers([
-			grey_not(grey_accessibilityID("playAgainBtn")),
-			grey_not(grey_ancestor(grey_accessibilityID("playAgainBtn"))),
-			grey_text("Play Again")]))
-			.perform(grey_tap())
+		EarlGrey.select(elementWithMatcher: grey_text("Play Again")).inRoot(grey_kindOfClass(NSClassFromString("_UIAlertControllerActionView"))).perform(grey_tap())
 		
 		
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("numberBtn")).assert(with: grey_buttonTitle("0"))
