@@ -34,6 +34,7 @@ target 'FizzBuzzTDDSwift' do
     inherit! :search_paths
     # Pods for testing
     pod 'KIF', '~> 3.0'
+	pod 'KIF/IdentifierTests'
   end
 
 end
