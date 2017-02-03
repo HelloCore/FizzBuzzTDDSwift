@@ -48,6 +48,26 @@
                ReferencedContainer = "container:FizzBuzzTDDSwift.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "85CE07511E44D69A006BF04D"
+               BuildableName = "FizzBuzzTDDSwiftEGTests.xctest"
+               BlueprintName = "FizzBuzzTDDSwiftEGTests"
+               ReferencedContainer = "container:FizzBuzzTDDSwift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "85CE075F1E44D6A9006BF04D"
+               BuildableName = "FizzBuzzTDDSwiftKIFTests.xctest"
+               BlueprintName = "FizzBuzzTDDSwiftKIFTests"
+               ReferencedContainer = "container:FizzBuzzTDDSwift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

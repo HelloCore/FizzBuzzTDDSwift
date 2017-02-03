@@ -42,6 +42,12 @@ class ViewController: UIViewController {
 		gameScore = 0
 		game?.restart()
 	}
+	
+	func clearGame() {
+		highScore = 0
+		gameScore = 0
+		game?.restart()
+	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -89,6 +95,8 @@ class ViewController: UIViewController {
 		present(alertController, animated: true)
 	}
 	
-	
+	@IBAction func clearButtonClick(_ sender: Any) {
+		clearGame()
+	}
 }
 

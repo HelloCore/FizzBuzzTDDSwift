@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -111,6 +111,20 @@
                                     <constraint firstAttribute="bottomMargin" secondItem="548-Id-BG4" secondAttribute="bottom" id="voz-FM-q3Y"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le6-CA-bxG">
+                                <rect key="frame" x="11" y="629" width="36" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="clearBtn"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="LtK-fO-KeF"/>
+                                    <constraint firstAttribute="height" constant="30" id="WkS-4g-eNN"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wcc-34-TEk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.46274509803921571" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -118,7 +132,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2I2-4p-bwq" secondAttribute="bottom" constant="8" id="5eo-Ph-8G6"/>
                             <constraint firstItem="56T-jR-CiH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7OA-JJ-q3S"/>
                             <constraint firstItem="56T-jR-CiH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Asx-Ij-siX"/>
+                            <constraint firstItem="Le6-CA-bxG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="Bju-sq-45i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2I2-4p-bwq" secondAttribute="trailing" constant="-5" id="Wr4-nD-cNa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Le6-CA-bxG" secondAttribute="bottom" constant="8" id="cqe-XE-i96"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7V2-pC-v5F" secondAttribute="trailing" id="moc-M5-pLF"/>
                             <constraint firstItem="7V2-pC-v5F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uin-MD-0Fb"/>
                         </constraints>
