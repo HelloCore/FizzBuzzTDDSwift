@@ -101,6 +101,7 @@ class FizzBuzzTDDSwiftKIFTests: XCTestCase {
 		tester().tapView(withAccessibilityIdentifier: "numberBtn")
 		tester().tapView(withAccessibilityIdentifier: "fizzBtn")
 		tester().tapView(withAccessibilityIdentifier: "fizzBtn")
+		tester().waitForView(withAccessibilityLabel: <#T##String!#>, value: <#T##String!#>, traits: <#T##UIAccessibilityTraits#>)
 		tester().waitForView(withAccessibilityLabel: "Your score is 3 and high score is 0")
 		
 		tester().tapView(withAccessibilityLabel: "Play Again")
